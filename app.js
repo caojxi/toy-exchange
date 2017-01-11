@@ -1,10 +1,17 @@
 import Koa from 'koa'
-const app = new Koa()
+import Router from 'koa-router'
 
-// response
-app.use(async (ctx) => {
+const app = new Koa()
+const router = new Router()
+
+router.get('/', async (ctx, next) => {
   ctx.body = 'Hello World!'
 })
+
+// response
+app
+.use(router.routes())
+.use(router.allowedMethods())
 
 app.listen(4000, () => console.log('server started 4000'))
 

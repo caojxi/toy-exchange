@@ -1,19 +1,13 @@
 import Koa from 'koa'
-import Router from 'koa-router'
+import api from './api/v1'
 
 const app = new Koa()
-const router = new Router()
-
-router.get('/', async (ctx, next) => {
-  ctx.body = 'Hello World!'
-})
 
 // response
-app
-.use(router.routes())
-.use(router.allowedMethods())
+app.use(api.routes())
+app.use(api.allowedMethods())
 
-app.listen(4000, () => console.log('server started 4000'))
+const port  = 4000
+app.listen(port, () => console.log(`server started ${port}`))
 
 export default app
-

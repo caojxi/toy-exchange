@@ -16,7 +16,9 @@
   "author": "Nick Cao",
   "dependencies": {
     "koa": "^2.0.0-alpha.3",
-    "koa-router": "^7.0.1"
+    "koa-router": "^7.0.1",
+    "mysql": "^2.12.0",
+    "orm": "^3.2.3"
   },
   "devDependencies": {
     "babel-plugin-syntax-async-functions": "^6.8.0",

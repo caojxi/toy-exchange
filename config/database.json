@@ -1,0 +1,7 @@
+{
+    "host":     "localhost",
+    "port":     "3306",
+    "database": "koa-sample-sandbox",
+    "username": "koa-sample",
+    "password": "demo"
+}
